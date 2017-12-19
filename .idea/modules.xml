@@ -2,8 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://C:\Users\PC\AndroidStudioProjects\LoginFireBaseExample-master\LoginFireBase.iml" filepath="C:\Users\PC\AndroidStudioProjects\LoginFireBaseExample-master\LoginFireBase.iml" />
-      <module fileurl="file://$PROJECT_DIR$/LoginFireBaseExample-master.iml" filepath="$PROJECT_DIR$/LoginFireBaseExample-master.iml" />
+      <module fileurl="file://$PROJECT_DIR$/LoginFireBase-GoogleMaps.iml" filepath="$PROJECT_DIR$/LoginFireBase-GoogleMaps.iml" />
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
     </modules>
   </component>

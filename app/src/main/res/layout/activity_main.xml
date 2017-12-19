@@ -34,6 +34,109 @@
         android:paddingTop="@dimen/activity_vertical_margin"
         app:layout_behavior="@string/appbar_scrolling_view_behavior">
 
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="15dp"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/last_update_time_text"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/small_margin"
+                android:layout_marginStart="@dimen/small_margin"
+                android:layout_marginTop="10dp"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:textSize="@dimen/default_text_size" />
+
+            <TextView
+                android:id="@+id/location_inadequate_warning"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="60dp"
+                android:layout_weight="1"
+                android:text="@string/location_settings_inadequate_warning"
+                android:visibility="invisible" />
+
+        </LinearLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <Button
+                android:id="@+id/getLocation"
+                style="?android:textAppearanceSmall"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentTop="true"
+                android:layout_weight="1"
+                android:background="@color/colorPrimaryDark"
+                android:text="Location"
+                android:onClick="startUpdatesButtonHandler"
+                android:textColor="@android:color/white" />
+
+            <ProgressBar
+                android:id="@+id/progress_bar"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentTop="true" />
+
+            <TextView
+                android:id="@+id/location_address_view"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentTop="true"
+                android:layout_marginTop="@dimen/text_margin_top"
+                android:textIsSelectable="true"
+                android:textSize="@dimen/default_text_size" />
+
+            <TextView
+                android:id="@+id/longitude_text"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:layout_below="@+id/getLocation"
+                android:layout_marginTop="22dp"
+                android:gravity="right"
+                android:text="@string/longitude_label"
+                android:textIsSelectable="true"
+                android:visibility="invisible" />
+
+            <TextView
+                android:id="@+id/latitude_text"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentTop="true"
+                android:layout_marginTop="90dp"
+                android:gravity="right"
+                android:text="@string/latitude_label"
+                android:textIsSelectable="true"
+                android:visibility="invisible" />
+
+            <Button
+                android:id="@+id/bMap"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentTop="true"
+                android:onClick="stopUpdatesButtonHandler"
+                android:text="Map" />
+
+        </RelativeLayout>
+
         <EditText
             android:id="@+id/old_email"
             android:layout_width="match_parent"
@@ -75,51 +178,6 @@
             android:inputType="textPassword"
             android:maxLines="1"
             android:singleLine="true" />
-
-        <RelativeLayout
-            android:layout_width="match_parent"
-            android:layout_height="match_parent">
-
-            <Button
-                android:id="@+id/getLocation"
-                style="?android:textAppearanceSmall"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_alignParentLeft="true"
-                android:layout_alignParentStart="true"
-                android:layout_alignParentTop="true"
-                android:layout_weight="1"
-                android:background="@color/colorPrimaryDark"
-                android:text="Location"
-                android:textColor="@android:color/white" />
-
-            <TextView
-                android:id="@+id/latitude_text"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_alignParentLeft="true"
-                android:layout_alignParentStart="true"
-                android:layout_alignParentTop="true"
-                android:layout_weight="1"
-                android:gravity="right"
-                android:text="@string/latitude_label"
-                android:textIsSelectable="true"
-                android:visibility="invisible" />
-
-            <TextView
-                android:id="@+id/longitude_text"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_alignBottom="@+id/getLocation"
-                android:layout_alignParentEnd="true"
-                android:layout_alignParentRight="true"
-                android:layout_weight="1"
-                android:gravity="right"
-                android:text="@string/longitude_label"
-                android:textIsSelectable="true"
-                android:visibility="invisible" />
-
-        </RelativeLayout>
 
         <Button
             android:id="@+id/changeEmail"
