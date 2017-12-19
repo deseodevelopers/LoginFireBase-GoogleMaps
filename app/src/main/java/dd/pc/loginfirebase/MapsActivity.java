@@ -58,41 +58,6 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
 
     private GoogleMap mMap;
 
-    /**
-     * Represents a geographical location in the past.
-     */
-    private Location mLastLocation;
-    private String mLatitudeLabel, mLongitudeLabel;
-    private TextView mLatitudeText, mLongitudeText;
-    /**
-     * Represents a geographical location in the present.
-     */
-    private Location mCurrentLocation;
-
-    /**
-     * Displays the location address.
-     */
-    private TextView mLocationAddressTextView;
-
-
-    /**
-     * Tracks whether the user has requested an address. Becomes true when the user requests an
-     * address and false when the address (or an error message) is delivered.
-     */
-    private boolean mAddressRequested;
-
-    /**
-     * The formatted location address.
-     */
-    private String mAddressOutput;
-
-    /**
-     * Receiver registered with this activity to get the response from FetchAddressIntentService.
-     */
-    private MainActivity.AddressResultReceiver mResultReceiver;
-
-
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -118,21 +83,6 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
         mMap = googleMap;
 
         setUpMap();
-
-
-        // Add a marker in Sydney and move the camera
-        //LatLng currentLocation = new LatLng(33.7756, -84.3963);
-
-
-        //LatLng currentLocation = new LatLng(Integer.parseInt(String mLatitudeText), Integer.parseInt(String mLongitudeText));
-
-        //String latitude = mLatitudeText;
-        //String longitude = mLongitudeText;
-        //LatLng currentLocation = new LatLng(Integer.parseInt(String latitude), Integer.parseInt(String longitude));
-
-        //mMap.addMarker(new MarkerOptions().position(currentLocation).title("Current Location"));
-        //mMap.moveCamera(CameraUpdateFactory.newLatLng(currentLocation));
-        //mMap.moveCamera(CameraUpdateFactory.zoomTo(17));
 
     }
 
